@@ -85,6 +85,15 @@ if [[ ! -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]]; then
   sed -i -e 's/ZSH_THEME="\(.*\)"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ${HOME_ZSHRC}
 fi
 
+# Install Visual Studio Code
+if [[ ! -d "/Applications/Visual Studio Code.app" ]]; then
+    echo "Installing Visual Studio Code..."
+    sh -c "$(curl -fsSL "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal" -o /tmp/vscode.zip)"
+    sh -c "$(unzip -o /tmp/vscode.zip -d /tmp >/dev/null)"
+    mv "/tmp/Visual Studio Code.app" "/Applications"
+    rm "/tmp/vscode.zip"
+fi
+
 # Install [nvm, NodeJS, yarn]
 if ! grep -q "NVM" ${HOME_ZSHRC}; then
     # Install nvm

@@ -9,6 +9,7 @@ Automation to setup new MacBook for software development (supports Apple Silicon
 - Homebrew (GNU Core Utilities, git, wget, zsh, etc)
 - Oh My Zsh
 - Powerlevel10k theme for Oh My Zsh
+- Visual Studio Code
 - nvm (NodeJS, Yarn)
 - Rust
 
