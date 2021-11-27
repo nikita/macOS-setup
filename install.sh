@@ -62,6 +62,16 @@ PACKAGES=(
 echo "Installing brew packages..."
 brew install ${PACKAGES[@]}
 
+# git default config / ignore
+if [[ ! -f "${HOME}/.gitconfig" ]]; then
+    echo "Installing .gitconfig..."
+    cp ./utils/git/.gitconfig ~/.gitconfig
+fi
+if [[ ! -f "${HOME}/.gitignore" ]]; then
+    echo "Installing .gitignore..."
+    cp ./utils/git/.gitignore ~/.gitignore
+fi
+
 # Install Oh My Zsh
 if [[ ! -d "${HOME}/.oh-my-zsh" ]]; then
   echo "Installing Oh My Zsh..."

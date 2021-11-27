@@ -12,6 +12,10 @@ Automation to setup new MacBook for software development (supports Apple Silicon
 - nvm (NodeJS, Yarn)
 - Rust
 
+# Configs
+
+- git (Default .gitconfig / .gitignore)
+
 ## Installation
 
 ```sh
